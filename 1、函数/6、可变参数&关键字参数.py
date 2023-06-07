@@ -44,3 +44,10 @@ def func(**kwargs): #key word argumets    "**"
     print(kwargs)
 #调用
 func(a=1,b=2,c=3)
+func()
+func(a=1)
+func(a=1,b=2)
+
+dict1={'001':'java','002':'c++','003':'go语言'}
+# func(dict1) 会报错！
+func(**dict1) # **dict  传递实参：**变量名  给参数赋值的时候，会将字典进行拆包
