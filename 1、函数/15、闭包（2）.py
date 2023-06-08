@@ -10,7 +10,11 @@ def func(a,b):
 
 
 # 调用：
-func(6,9)()
+# func(6,9)()
 x = func(6,9) # x 就是 inner_func
+y = func(2,8)
+
+y()
 x()
-print(x)
+
+
