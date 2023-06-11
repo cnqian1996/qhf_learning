@@ -7,7 +7,7 @@
 '''
 
 
-# 定义一个装饰器
+# 定义一个装饰器！
 def decorate(func):
     a = 100
     print("wrapper外层打印测试！")
