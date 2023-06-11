@@ -25,12 +25,23 @@ def decorate(func):
 def house():
     print("我是毛坯房！")
 
+'''
+1.house被装饰函数
+2.将被装饰函数作为参数传给装饰器decorate
+3.执行decorate函数
+4.将返回值又赋值给house
+'''
+print(house)
+#  调用函数
+house()
+
+
+
 # def house1():
 #     house()
 #     print('刷漆')
 #     print('铺地板')
-# # 调用函数
-house()
+
 
 # '''
 # 加入购物车，付款，修改收货地址......
