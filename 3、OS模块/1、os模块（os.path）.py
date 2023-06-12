@@ -24,6 +24,7 @@ print(r)
 path = os.getcwd()  # 类似于 os.path.dirname(__file__)
 print("-----", path)
 
+# 复制文件
 with open(r"C:\Users\QHF\PycharmProjects\qhf_learning\test.png", 'rb') as stream:
     container = stream.read()  # 读取文件内容
     print(stream.name)
@@ -38,7 +39,7 @@ with open(r"C:\Users\QHF\PycharmProjects\qhf_learning\test.png", 'rb') as stream
 
 print("文件复制完成！")
 
-path = r'C:/Users/QHF/PycharmProjects/qhf_learning/3、OS模块/1、os模块简介.py'
+path = r'/3、OS模块/1、os模块（os.path）.py'
 result = os.path.split(path)
 print(result[1])  # filename = file[file.rfind("\\")+1:]
 
@@ -47,3 +48,6 @@ print(result)  # ('C:/Users/QHF/PycharmProjects/qhf_learning/3、OS模块/1、os
 
 size = os.path.getsize(path) # 获取文件的大小，单位是字节
 print(size)
+
+result = os.path.join(os.getcwd(),'file','aaa','test11.jpg')
+print(result)
