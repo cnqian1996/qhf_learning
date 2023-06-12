@@ -3,6 +3,13 @@
 os.path:
 os.path.dirname(__name__) 获取当前文件所在的文件夹目录（绝对路径）
 os.path.join(path,"...") 返回的是一个拼接后的新的路径
+os.path.split() 分割（文件目录，文件名）
+os.path.splittext() 分割（文件目录\文件名，文件的扩展名）
+os.path.getsize() 获取文件大小
+
+isabs() 判断是否是绝对路径
+isfile() 判断是否是文件
+isdir() 判断是否是文件夹
 '''
 import os
 

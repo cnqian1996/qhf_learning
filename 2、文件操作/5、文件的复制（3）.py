@@ -5,22 +5,29 @@ src_path = r"C:\Users\QHF\Desktop\qhf_TEST1"
 target_path = r"C:\Users\QHF\Desktop\qhf_TEST2"
 
 
-# 封装成函数
-def copy(src, target):
-    if os.path.isdir(src) and os.path.isdir(target):
-        filelist = os.listdir(src)  # ['aa.txt','','']
+def copy(src_path, target_path):
+    # 获取文件夹里面的内容
+    filelist = os.listdir(src_path)
+    # print(filelist)
 
-        for file in filelist:
+    # 遍历列表
+    for file in filelist:
+        path = os.path.join(src_path, file)  # 拼接路径
+        if os.path.isdir(path):  # 判断是否为文件夹
+            target_path1 = os.path.join(target_path, file)  # 拼接目标路径
+            os.mkdir(target_path1)  # 创建目标文件夹
+            copy(path, target_path1)  # 拷贝
 
-            path = os.path.join(src, file)
+        else:
             with open(path, 'rb') as rstream:
                 container = rstream.read()
 
-                path1 = os.path.join(target, file)
+                path1 = os.path.join(target_path, file)
                 with open(path1, 'wb') as wstream:
                     wstream.write(container)
-        else:
-            print('复制完毕！')
+    else:
+        print("复制完成！")
+
 
 
 # 调用函数
