@@ -37,6 +37,11 @@ f1(5)
 
 
 def sum1(n):
+    '''
+    求和的函数
+    :param n: 从1~n的累加和
+    :return: 求和的结果
+    '''
     if n == 100:
         pass
     else:
