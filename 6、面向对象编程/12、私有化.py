@@ -49,6 +49,8 @@ class Student:
     def __str__(self):
         return "姓名：{}，年龄：{}，考试分数：{}".format(self.__name, self.__age, self.__socre)
 
+    # attribute : setName getName __str__  __init__
+
 
 zy = Student("郑义", 20)
 print(zy)
@@ -63,3 +65,9 @@ wxc.setAge(88)
 print(wxc)
 
 print(wxc.getAge())
+
+print(dir(Student)) # 查看类里面的所有属性
+print(dir(wxc)) # 查看对象里面的所有属性
+
+# print(_Student__name) # 其实它就是__age,只不过系统自动改名字了。
+print(__name__)
