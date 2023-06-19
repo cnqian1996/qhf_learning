@@ -68,7 +68,7 @@ print(result)
 # qq号码验证 5~11 开头不能是0
 qq = '14944689962'
 result = re.match('^[1-9][0-9]{4,10}$',qq)
-print(result)
+print(result.group())
 
 # 用户名可以是字母或者数字，不能是数字开头，用户名长度必须6位以上[0-9a-zA-Z]
 username = 'admin001'
