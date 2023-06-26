@@ -1,3 +1,17 @@
+'''
+特点：
+添加一个执行一个任务，如果一个任务不结束另一个任务就进不来。
+
+进程池：
+pool = Pool(max) 创建进程池对象
+pool.apply() 阻塞的
+pool.apply_async() 非阻塞的
+
+pool.close()
+pool.join() 让主进程让步
+'''
+
+
 from random import random
 from multiprocessing import Pool
 import time
